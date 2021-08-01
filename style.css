@@ -1,0 +1,207 @@
+body {
+    background: #EC6F66;
+    background: -webkit-linear-gradient(to right, #F3A183, #EC6F66);
+    background: linear-gradient(to right, #F3A183, #EC6F66);
+    min-height: 100vh;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.card {
+    box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, .4) !important;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.card-header {
+    background-color: transparent;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+.card-header h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+input,
+textarea {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .225);
+    border-radius: 30px;
+    padding: 6px 15px;
+    width: 100%;
+    font-size: 14px;
+}
+
+textarea {
+    height: 50px;
+    resize: none;
+}
+
+input:focus,
+textarea:focus {
+    border: 1px solid rgba(0, 0, 0, .7);
+}
+
+button:not(.btn-close) {
+    display: inline-block;
+    vertical-align: middle;
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, .7);
+    border-radius: 30px;
+    background-color: #fff;
+    padding: 5px 17px;
+    font-size: 15px;
+}
+
+button:hover:not(.btn-close) {
+    background: #000000;
+    color: #fff;
+}
+
+.tweet-wrapper {
+    max-height: 350px;
+    overflow: auto;
+}
+
+.tweet-wrapper::-webkit-scrollbar {
+    width: 3px;
+    background-color: #fc7a87;
+    border-radius: 50px;
+}
+
+.tweet-wrapper::-webkit-scrollbar-thumb {
+    background: rgba(54, 54, 54, 0.7);
+    border-radius: 50px;
+}
+
+.tweet-wrapper::-webkit-scrollbar-track {
+    background-color: #e9edf0;
+    border-left: 1px solid #ededed;
+    border-radius: 30px;
+}
+
+.tweet-container {
+    counter-reset: tweet;
+    padding-left: 0;
+    /* list-style-type: none; */
+}
+
+.tweet-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.tweet-item::before {
+    counter-increment: tweet;
+    content: counter(tweet)". ";
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.tweet-details {
+    flex: 1;
+}
+
+.tweet-item .tweet-text {
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: flex
+}
+
+.tweet-item .tweet-text span {
+    margin-right: 5px;
+}
+
+.tweet-item .tweet-text p {
+    margin-bottom: 0;
+}
+
+.tweet-item .tweet-time {
+    font-size: 12px;
+    color: rgb(255, 255, 255);
+    background: rgba(54, 54, 54, 0.7);
+    display: inline-block;
+    border-radius: 10px;
+    padding: 2px 10px;
+    margin-bottom: 0;
+}
+
+.action-button-wrapper {
+    width: 145px;
+}
+
+.card-footer {
+    background: #fff;
+    border-top: none;
+}
+
+.tweet-form-wrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.input-wrapper textarea {
+    padding-right: 60px;
+}
+
+.input-wrapper textarea::-webkit-scrollbar {
+    display: none;
+}
+
+.input-wrapper textarea {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.input-wrapper p {
+    position: absolute;
+    display: inline-block;
+    font-size: 14px;
+    color: #444444;
+    right: 8px;
+    top: 13px;
+    background: rgb(197, 197, 197);
+    border-radius: 30px;
+    padding: 1px 8px;
+    margin-bottom: 0;
+}
+
+.tweet-form-wrapper button {
+    padding-top: 12px;
+    padding-bottom: 13px;
+}
+
+.toast {
+    background-color: #fff;
+}
+
+.toast-body {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.toast i {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.toast.success i {
+    color: rgb(4, 207, 4);
+}
+
+.toast.error i,
+.toast.delete i {
+    color: tomato;
+}
