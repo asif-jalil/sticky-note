@@ -133,6 +133,11 @@ function deleteTweet(id) {
     actionMsg("delete", "Your tweet has been deleted");
 
     tweetList = document.querySelectorAll(".tweet-item");
+
+    if (!tweetData.length) {
+        emptyAlert.classList.remove("d-none");
+        tweetContainer.classList.add("d-none");
+    }
 }
 
 function updateTweet(targetTweet) {
