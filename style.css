@@ -10,6 +10,9 @@ body {
     justify-content: center;
 }
 
+::selection {
+    background-color: rgba(236, 111, 102, 0.301);
+}
 
 .card {
     box-shadow: 0 1rem 3rem 0.5rem rgba(0, 0, 0, .4) !important;
@@ -28,7 +31,7 @@ body {
     margin-bottom: 20px;
 }
 
-input,
+input[type=text],
 textarea {
     outline: none;
     border: 1px solid rgba(0, 0, 0, .225);
@@ -65,7 +68,7 @@ button:hover:not(.btn-close) {
 }
 
 .tweet-wrapper {
-    max-height: 350px;
+    max-height: 250px;
     overflow: auto;
 }
 
@@ -115,7 +118,7 @@ button:hover:not(.btn-close) {
     display: flex
 }
 
-.tweet-item .tweet-text span {
+.tweet-item .tweet-text>span {
     margin-right: 5px;
 }
 
@@ -123,7 +126,12 @@ button:hover:not(.btn-close) {
     margin-bottom: 0;
 }
 
-.tweet-item .tweet-time {
+.tweet-item .tweet-text p span {
+    color: #ffce2f;
+}
+
+.tweet-item .tweet-time,
+.tweet-item .inline-btn {
     font-size: 12px;
     color: rgb(255, 255, 255);
     background: rgba(54, 54, 54, 0.7);
@@ -131,6 +139,14 @@ button:hover:not(.btn-close) {
     border-radius: 10px;
     padding: 2px 10px;
     margin-bottom: 0;
+}
+
+.tweet-item .inline-btn {
+    cursor: pointer;
+}
+
+.btn-check:checked+.inline-btn {
+    background: rgb(27, 27, 27);
 }
 
 .action-button-wrapper {
