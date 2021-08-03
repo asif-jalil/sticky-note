@@ -124,7 +124,7 @@ function displayItem(item) {
                 <div class="tweet-meta">
                     <p class="tweet-time">${moment(item.time).fromNow()}</p>
                     <input class="btn-check" type="checkbox" checked id="readMark-${item.id}">
-                    <label class="inline-btn" for="readMark-${item.id}"><i class="fas fa-check"></i> Mark as read</label>
+                    <label class="inline-btn" for="readMark-${item.id}"><i class="fas fa-check"></i> Mark as done</label>
                 </div>
             </div>
             <div class="action-button-wrapper">
@@ -141,7 +141,7 @@ function displayItem(item) {
                 <div class="tweet-meta">
                     <p class="tweet-time">${moment(item.time).fromNow()}</p>
                     <input class="btn-check" type="checkbox" id="readMark-${item.id}">
-                    <label class="inline-btn" for="readMark-${item.id}"><i class="fas fa-check"></i> Mark as read</label>
+                    <label class="inline-btn" for="readMark-${item.id}"><i class="fas fa-check"></i> Mark as done</label>
                 </div>
             </div>
             <div class="action-button-wrapper">
