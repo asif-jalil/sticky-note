@@ -11,7 +11,8 @@ body {
 }
 
 ::selection {
-    background-color: rgba(236, 111, 102, 0.301);
+    background-color: rgba(255, 137, 68, 0.678);
+    color: #000;
 }
 
 .card {
@@ -99,6 +100,7 @@ button:hover:not(.btn-close) {
     display: flex;
     justify-content: space-between;
     margin-bottom: 15px;
+    position: relative;
 }
 
 .tweet-item::before {
@@ -126,8 +128,13 @@ button:hover:not(.btn-close) {
     margin-bottom: 0;
 }
 
+.tweet-item .tweet-text p del {
+    color: #919191;
+}
+
 .tweet-item .tweet-text p span {
-    color: #ffce2f;
+    color: #ff831e;
+    font-weight: 500;
 }
 
 .tweet-item .tweet-time,
@@ -166,6 +173,7 @@ button:hover:not(.btn-close) {
 .input-wrapper {
     position: relative;
     width: 100%;
+    margin-right: 15px;
 }
 
 .input-wrapper textarea {
@@ -220,4 +228,43 @@ button:hover:not(.btn-close) {
 .toast.error i,
 .toast.delete i {
     color: tomato;
+}
+
+@media (max-width: 575.99px) {
+    .tweet-item {
+        flex-direction: column;
+    }
+
+    .tweet-details {
+        margin-bottom: 15px;
+    }
+
+    .tweet-item::before {
+        position: absolute;
+    }
+
+    .tweet-item .tweet-text,
+    .tweet-item .tweet-meta {
+        padding-left: 15px;
+    }
+
+    button:not(.btn-close) {
+        padding: 0px 15px;
+        font-size: 14px;
+    }
+
+    .tweet-form-wrapper {
+        flex-direction: column;
+    }
+
+    .input-wrapper {
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+
+    .tweet-form-wrapper button {
+        padding-top: 4px;
+        padding-bottom: 4px;
+        width: 100%;
+    }
 }
