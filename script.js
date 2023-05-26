@@ -29,9 +29,9 @@ function loadListeners() {
         const filteredTweet = tweetData.filter((tweet) => {
             const tweetTextContent = tweet.tweet.toLowerCase();
             if (filterText === "") {
-                return tweet;
+                return true;
             } else if (tweetTextContent.includes(filterText)) {
-                return tweet;
+                return true;
             }
         });
 
@@ -128,8 +128,8 @@ function displayItem(item) {
                 </div>
             </div>
             <div class="action-button-wrapper">
-                <button class="edit-tweet" onclick="editTweet(${item.id})">Edit</button>
-                <button class="delete-tweet" onclick="deleteTweet(${item.id})">Delete</button>
+                <button class="edit-tweet" onclick="editTweet(${item.id})"><i class="fa-solid fa-pen"></i></button>
+                <button class="delete-tweet" onclick="deleteTweet(${item.id})"><i class="fa-solid fa-trash-can"></i></button>
             </div>
         `;
     } else {
@@ -145,8 +145,8 @@ function displayItem(item) {
                 </div>
             </div>
             <div class="action-button-wrapper">
-                <button class="edit-tweet" onclick="editTweet(${item.id})">Edit</button>
-                <button class="delete-tweet" onclick="deleteTweet(${item.id})">Delete</button>
+                <button class="edit-tweet" onclick="editTweet(${item.id})"><i class="fa-solid fa-pen"></i></button>
+                <button class="delete-tweet" onclick="deleteTweet(${item.id})"><i class="fa-solid fa-trash-can"></i></button>
             </div>
         `;
     }

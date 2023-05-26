@@ -68,6 +68,21 @@ button:hover:not(.btn-close) {
     color: #fff;
 }
 
+.search{
+    position: relative;    
+}
+
+.search i{
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    color: rgba(0, 0, 0, .5);
+}
+
+.search input{
+    padding-left: 35px;
+}
+
 .tweet-wrapper {
     max-height: 250px;
     overflow: auto;
@@ -152,12 +167,30 @@ button:hover:not(.btn-close) {
     cursor: pointer;
 }
 
+.edit-tweet,
+.delete-tweet{
+    border: none !important;
+}
+
+.edit-tweet:hover,
+.delete-tweet:hover{
+    background: none !important;
+}
+
+.edit-tweet:hover {
+    color: #0057d8 !important;
+}
+.delete-tweet:hover {
+    color: rgb(205, 61, 0) !important;
+}
+
 .btn-check:checked+.inline-btn {
     background: rgb(27, 27, 27);
 }
 
 .action-button-wrapper {
-    width: 145px;
+    max-width: 145px;
+    align-self: center;
 }
 
 .card-footer {
